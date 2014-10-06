@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=792, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+    <style media="screen">
+        section.slide.cover h2 {
+            color: white;
+            font-size: 3em;
+            text-align: center;
+        }
+
+        section.slide.cover img {
+            width: 100%;
+            height: 100%;
+        }
+        section.slide .images img {
+            padding: 20px;
+        }
+
+        section blockquote em {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="list">
+    <header class="caption">
+        <h1>Introduction to the Internet</h1>
+        <p>Michiel Missotten</p>
+    </header>
+
+    <section class="slide cover">
+        <div>
+            <h2>Introduction to the Internet<br>Part 2</h2>
+            <img src="pictures/tropical.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>What have we seen ?</h2>
+            <ul>
+                <li class="next">History</li>
+                <li class="next">Network sizes</li>
+                <li class="next">Network topology</li>
+                <li class="next">Network hardware</li>
+                <li class="next">OSI and its 7 layers</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>What are we going to do today ?</h2>
+            <ul>
+                <li class="next">TCP/IP</li>
+                <li class="next">UDP</li>
+                <li class="next">IP</li>
+                <li class="next">MAC</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide shout">
+        <div>
+            <h2>TCP/IP</h2>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>TCP : Transmission control protocol / Internet Protocol</h2>
+            <ul>
+                <li>Alternative to OSI</li>
+                <li>Model in 4 layers</li>
+                <li>Created by DARPA in 1984</li>
+                <li>Basis of the internet of today</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>4 layers</h2>
+            <ul>
+                <li>Application</li>
+                <li>Transport</li>
+                <li>Internet</li>
+                <li>Link</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Application layer</h2>
+            <ul>
+                <li>Application data</li>
+                <li>Examples : HTTP, FTP, SSH...</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Transport</h2>
+            <ul>
+                <li>Error-control</li>
+                <li>Application addressing</li>
+                <li>Port</li>
+                <li>Examples : TCP, UDP</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Internet</h2>
+            <ul>
+                <li>Sends data over differents networks</li>
+                <li>Examples : IP</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Link</h2>
+            <ul>
+                <li>How is the data transmitted ?</li>
+                <li>Token ring, Ethernet</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Port</h2>
+            <ul>
+                <li class="next">For multiple applications on same device</li>
+                <li class="next">Each application has its own port</li>
+                <li class="next">Between 1 and 65535</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Reserved ports</h2>
+            <ul>
+                <li>HTTP : 80</li>
+                <li>SSL : 443</li>
+                <li>FTP : 21</li>
+                <li>SSH : 22</li>
+                <li>SMTP : 25</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Octets &amp; bits</h2>
+            <ul>
+                <li>Bit : basic unit</li>
+                <li>Bit = 0 or 1</li>
+                <li>Octet = 8 bits</li>
+                <li>Octet = Hexadecimal presentation</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide shout">
+        <div>
+            <h2>BIT IS NOT BYTE</h2>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>What is an IP address?</h2>
+            <blockquote>
+                An Internet Protocol address (IP address) is a numerical label assigned to each device (e.g., computer, printer) participating in a computer network that uses the Internet Protocol for communication
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>IP address :</h2>
+            <ul>
+                <li>V4 : 173.194.40.165</li>
+                <li>V4 : 4 octets</li>
+                <li>V6 : 2001:0db8:0000:85a3:0000:0000:ac1f:8001</li>
+                <li>V6 : 16 octets in hexa</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>TCP : Transmission Control Protocol</h2>
+            <blockquote>
+                TCP provides <em>reliable</em>, <em>ordered</em> and <em>error-checked</em> delivery of a stream of octets
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>TCP = Connected</h2>
+            <ol>
+                <li>Connecting</li>
+                <li>Transfering</li>
+                <li>Closing connection </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>TCP : handshake</h2>
+            <ol>
+                <li>A -> B : SYN</li>
+                <li>B -> A : SYN/ACK</li>
+                <li>A -> B : ACK</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>TCP HEADER</h2>
+            <img src="pictures/tcp-header.png" alt="" />
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>UDP : User Datagram Protocol</h2>
+            <ul>
+                <li>Used for speed</li>
+                <li>Real-time</li>
+                <li>Unreliable</li>
+                <li>No ordering</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>UDP HEADER</h2>
+            <img src="pictures/udp-header.png" alt="" />
+        </div>
+    </section>
+
+    <div class="progress"><div></div></div>
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+    <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
