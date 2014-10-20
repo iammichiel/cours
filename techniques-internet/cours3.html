@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=792, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+    <style>
+        section.slide.cover h2 {
+            color: white;
+            font-size: 3em;
+            text-align: center;
+        }
+
+        section.slide.cover img {
+            width: 100%;
+            height: 100%;
+        }
+        section.slide .images img {
+            padding: 20px;
+        }
+
+        section blockquote em {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="list">
+    <header class="caption">
+        <h1>Introduction to the Internet</h1>
+        <p>Michiel Missotten</p>
+    </header>
+
+    <section class="slide cover">
+        <div>
+            <h2>Introduction to the Internet<br>Part 3</h2>
+            <img src="pictures/tropical.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>What have we seen ?</h2>
+            <ul>
+                <li class="next">TCP/IP model</li>
+                <li class="next">TCP</li>
+                <li class="next">UDP</li>
+                <li class="next">Port</li>
+                <li class="next">Binary/Octet</li>
+                <li class="next">IP</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>What are we going to do today ?</h2>
+            <ul>
+                <li class="next">Domains</li>
+                <li class="next">HTTP</li>
+                <li class="next">HTTP</li>
+                <li class="next">HTTP</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide shout">
+        <div>
+            <h2>WEB = URI + HTTP + HTML</h2>
+        </div>
+    </section>
+
+    <section class="slide cover">
+        <div>
+            <img src="pictures/tim-berners-lee.jpg" alt="Tim Berners Lee" style="height: auto; width: 100%;" />
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>URI</h2>
+            <p class="next">
+                http://www.google.com/index.html
+            </p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>HTTP</h2>
+            <p class="next">
+                HyperText Transfer Protocol
+            </p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>HTTP</h2>
+            <ul>
+                <li>Created by IETF &amp; WWWC</li>
+                <li>RFC</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>HTTP</h2>
+            <ul>
+                <li class="next">HyperText : structured text using logical links between nodes</li>
+                <li class="next">Client-server</li>
+                <li class="next">Request-reponse</li>
+                <li class="next">Application layer</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>HTTP : Methods</h2>
+            <ul style="float:left;">
+                <li>GET/HEAD</li>
+                <li>POST</li>
+                <li>OPTIONS</li>
+                <li>CONNECT</li>
+                <li>TRACE</li>
+                <li>PUT/DELETE</li>
+                <li>PATCH</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>GET / HEAD</h2>
+            <ul>
+                <li>Asks for a ressource</li>
+                <li>Ressource identified by an URI</li>
+                <li>HEAD = GET without BODY response</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>POST</h2>
+            <ul>
+                <li>Send data via body</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>PUT/DELETE</h2>
+            <p>
+                Stores data under the URI <br>
+                Idempotent
+            </p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>OPTIONS</h2>
+            <ul>
+                <li>Returns the allowed options</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Response codes</h2>
+            <ul>
+                <li>100 : Information</li>
+                <li>200 : Ok</li>
+                <li>300 : Redirection</li>
+                <li>400 : Client error</li>
+                <li>500 : Server error</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Examples codes</h2>
+            <ul>
+                <li>200 : OK</li>
+                <li>301 : Moved permanently</li>
+                <li>401 : Authentication required</li>
+                <li>403 : Access refused</li>
+                <li>404 : Ressource not found</li>
+                <li>500 : Internal error</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="progress"><div></div></div>
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+    <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
