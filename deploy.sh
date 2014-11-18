@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rsync -rv . pink:/var/www/cours --exclude=.git
+rsync -rv . orange:/srv/www/cours --exclude=.git
