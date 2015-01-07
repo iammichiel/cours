@@ -1,0 +1,85 @@
+#content {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: lightblue;
+}
+
+header nav {
+    background-color: green;
+}
+
+header nav ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+header nav ul li {
+    display: inline-block;
+    background-color: gray;
+
+    padding: 10px;
+}
+
+footer {
+    border-top: 2px solid black;
+    background-color: lightgray;
+    clear: both;
+}
+
+footer .col {
+    width: 33%;
+    float: left;
+}
+
+.ligne {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.produit {
+    width: 25%;
+    float: left;
+
+    text-align: center;
+}
+
+.produit div img {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.produit div {
+    margin: 10px;
+    border: 1px solid red;
+}
+
+div.gauche, div.droite {
+    width: 50%;
+    float: left;
+}
+
+div.liens {
+    text-align: left;
+}
+
+div.gauche {
+    text-align: center;
+}
+
+div.miniatures {
+    width: 408px;
+
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+div.miniatures img {
+    padding-left: 15px;
+    padding-right: 15px;
+}
