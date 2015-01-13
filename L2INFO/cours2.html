@@ -54,7 +54,8 @@
                         PHP was invented in 1997 <br>
                         Personnal Home Page tools to track visits to his CV online <br>
                         Open Source in 1995 <br>
-                        Php HyperText Preprocessor
+                        Php HyperText Preprocessor <br>
+                        77.8% of current websites
                     </aside>
                 </section>
 
@@ -93,7 +94,213 @@
                     <h2>Specs of PHP</h2>
                 </section>
 
+                <section>
+                    <h2>Syntax</h2>
+                    <pre><code data-trim>
+&lt;?php
+    // Single line comment
+    $number = 10;
 
+    /* Block comment */
+    if ($number > 10) {
+        echo 'Greater !';
+    } else {
+        echo 'Lesser or equal';
+    }
+?&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Types</h2>
+                    <ul>
+                        <li>4 native types : integer, float, string, boolean</li>
+                        <li>2 compound : array, object</li>
+                        <li>2 special types : null, ressource</li>
+                    </ul>
+
+                    <aside class="notes">
+                        Examples of each type. <br>
+                        Concatenation on strings <br>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Arrays</h2>
+                    <ul>
+                        <li>Structure</li>
+                        <li>Acces via index</li>
+                        <li>Starts at 0</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Arrays</h2>
+                    <pre><code data-trim>
+$tab = array();
+$tab[] = 'Michiel';
+$tab[] = 'Missotten';
+
+echo $tab[0];
+echo $tab[1];
+
+$tab = array(
+    'Michiel', 'Missotten'
+);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Arrays</h2>
+                    <pre><code>
+$michiel = array(
+    'LastName'  => 'Missotten',
+    'FirstName' => 'Michiel'
+);
+
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Conditions</h2>
+                    <pre><code data-trim>
+if (condition) {
+
+} elseif {
+
+} else {
+
+}
+                    </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h2>Comparison</h2>
+                    <ul>
+                        <li>&lt; : strictly lesser then</li>
+                        <li>&gt; : strictly greater then</li>
+                        <li>== / === : equals</li>
+                        <li>!= / &lt;&gt; / !== : different from</li>
+                        <li>&amp;&amp; : AND</li>
+                        <li>|| : OR</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>While loop</h2>
+                    <pre><code data-trim>
+while ($i != 10) {
+    // CODE
+}
+                    </code></pre>
+
+
+                    <aside class="notes">
+                        Can break out a loop : break <br>
+                        Skip iteration : continue
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Do loop</h2>
+                    <pre><code data-trim>
+do {
+    // CODE
+} while ($i != 10);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>For loop</h2>
+                    <pre><code data-trim>
+
+for ($i = 0; $i != 10; $i++) {
+    // CODE
+}
+                </code></pre>
+                </section>
+
+                <section>
+                    <h2>Foreach loop</h2>
+                    <pre><code data-trim>
+foreach ($array as $element) {
+    // CODE
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Functions</h2>
+
+                    <div class="fragment">
+                    <pre><code data-trim>
+
+function sayHello($name) {
+    echo 'Hello ' . $name . ' !';
+}
+                    </code></pre>
+                </div>
+
+                    <aside class="notes">
+                        Readability/Re-usability <br>
+                        User-defined and pre-defined
+                    </aside>
+                </section>
+
+            </section>
+
+            <section>
+                <section>
+                    <h2>Exercice 1</h2>
+                    <p>
+                        Write a function that prints your age given a year of birth
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Exercice 2</h2>
+                    <p>
+                        Write a function that counts the number of letters in a given name
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Exercice 3</h2>
+                    <p>
+                        Create an associative array all european countries with their capitals and the country's population. <br>
+                        Display the list of countries first in alphabetical order, then order them by population.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Exercice 4</h2>
+                    <p>
+                        Calculate the factorial of 10
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Exercice 5</h2>
+                    <p>
+                        Create a function that returns true if the given word/sentence is a palindrome
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Exercice 6</h2>
+                    <p>
+                        Given the letter A is worth 1 point and B is worth 2 points, C is worth 4 points, etc. Calculate the value of
+                        the following words/sentences :
+                    </p>
+
+                    <ul>
+                        <li>PHP</li>
+                        <li>Lorem ipsum</li>
+                        <li>Je suis charlie</li>
+                        <li>we do not forget, we do not forgive, we are legion, expect us.</li>
+                    </ul>
+                </section>
             </section>
 
             <section>
@@ -102,7 +309,11 @@
                     <li>
                         <a href="http://php.net/manual/en/history.php.php">php.net - History of PHP</a>
                     </li>
+                    <li>
+                        <a href="http://fabien.potencier.org/article/64/php-is-much-better-than-you-think">Fabien Potencier - PHP is much better than you think</a>
+                    </li>
                 </ul>
+
             </section>
         </div>
     </div>
