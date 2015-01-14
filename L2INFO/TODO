@@ -1,0 +1,8 @@
+Creer un document pour expliquer : 
+
+- example de filter PHP
+- Expliquer le fonctionnement du cookie
+- HTTP methods for PHP (GET et POST)
+- HTTP Message 
+- Headers doivent etre envoyees avant le corps du message HTTP
+- Session PHP

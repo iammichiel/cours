@@ -84,7 +84,7 @@ set_cookie('username', 'michiel');
                 <section>
                     <h2>Sessions</h2>
                     <p>
-                        Session is a mix of Cookie with server-side storage
+                        Session is a mix of cookies and server-side storage
                     </p>
 
                     <pre><code data-trim class="php">
@@ -100,16 +100,24 @@ session_destroy();
                     </code></pre>
 
                     <aside class="notes">
-                        Session_start has to be done before echo because of the cookie.
+                        Session_start has to be called before echo because of the cookie.
                     </aside>
                 </section>
             </section>
 
             <section>
                 <section>
-                    <h2>User data validation</h2>
+                    <h2>User data </h2>
+                </section>
 
-                    <ul>
+                <section>
+                    <h1 class="fragment highlight-red">Users are evil</h1>
+                </section>
+
+                <section>
+                    <h2>validation/sanitization</h2>
+
+                    <ul class="fragment">
                         <li>filter_input</li>
                         <li>filter_var</li>
                     </ul>
@@ -146,13 +154,34 @@ session_destroy();
                         <li>FILTER_VALIDATE_URL</li>
                     </ul>
                 </section>
+
+                <section>
+                    <h2>Existing sanitization filters</h2>
+                    <ul>
+                        <li>FILTER_SANITIZE_EMAIL</li>
+                        <li>FILTER_SANITIZE_EMAIL</li>
+                        <li>FILTER_SANITIZE_MAGIC_QUOTES</li>
+                        <li>FILTER_SANITIZE_NUMBER_FLOAT</li>
+                        <li>FILTER_SANITIZE_NUMBER_INT</li>
+                        <li>FILTER_SANITIZE_SPECIAL_CHARS</li>
+                        <li>FILTER_SANITIZE_FULL_SPECIAL_CHARS</li>
+                        <li>FILTER_SANITIZE_STRING</li>
+                        <li>FILTER_SANITIZE_STRIPPED</li>
+                        <li>FILTER_SANITIZE_URL</li>
+                        <li>FILTER_UNSAFE_RAW</li>
+                    </ul>
+                </section>
             </section>
 
             <section>
                 <section>
+                    <h2>Exercices</h2>
+                </section>
+
+                <section>
                     <h2>Exercice 1</h2>
                     <p>
-                        Tranform previous exercices 1, 2, 4, 5, 6 into a single webpage where the user can input the data to test.
+                        Transform previous exercices 1, 2, 4, 5, 6 into a single webpage where the user can input the data to test.
                     </p>
                 </section>
 
@@ -179,6 +208,15 @@ session_destroy();
                         Add a logout link on the page that will deconnect the user.
                     </p>
                 </section>
+            </section>
+
+
+            <section>
+                <h2>Go further</h2>
+
+                <ul>
+                    <li></li>
+                </ul>
             </section>
 
         </div>
