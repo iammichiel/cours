@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Web 2 - L2INFO</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+    .logo {
+        width: 150px;
+    }
+    </style>
+
+    <script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>WEB 2</h1>
+                <h5>L2INFO - Part 3</h5>
+            </section>
+
+            <section>
+                <section>
+                    <h2>PHP is a web technology</h2>
+                </section>
+
+                <section>
+                    <h2>Acces to HTTP data</h2>
+                    <ul>
+                        <li>$_GET</li>
+                        <li>$_POST</li>
+                        <li>$_COOKIE</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>GET &amp; POST are arrays</h2>
+                    <pre><code data-trim class="php">
+$name = $_GET['username'];
+$lastName = $_POST['lastname'];
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Cookies are a mix</h2>
+                    <pre><code data-trim class="php">
+// Read via array
+$username = $_COOKIE['username'];
+
+// Set via function
+set_cookie('username', 'michiel');
+                    </code></pre>
+
+                    <aside class="notes">
+                        Cookie have a limited size. <br>
+                        Are sent on every request. <br>
+                        Per browser instance.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Sessions</h2>
+                    <p>
+                        Session is a mix of Cookie with server-side storage
+                    </p>
+
+                    <pre><code data-trim class="php">
+// Required to use session
+session_start();
+
+// Set and get data to session
+$_SESSION['username'] = 'michiel';
+$name = $_SESSION['name'];
+
+// Delete session
+session_destroy();
+                    </code></pre>
+
+                    <aside class="notes">
+                        Session_start has to be done before echo because of the cookie.
+                    </aside>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>User data validation</h2>
+
+                    <ul>
+                        <li>filter_input</li>
+                        <li>filter_var</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>filter_input arguments</h2>
+                    <ul>
+                        <li>type : INPUT_GET, INPUT_POST</li>
+                        <li>variableName</li>
+                        <li>(optional) Filter to apply</li>
+                        <li>(optional) Options</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>filter_var arguments</h2>
+                    <ul>
+                        <li>variableName</li>
+                        <li>(optional) Filter to apply</li>
+                        <li>(optional) Options</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Existing filters</h2>
+                    <ul>
+                        <li>FILTER_VALIDATE_BOOLEAN</li>
+                        <li>FILTER_VALIDATE_EMAIL</li>
+                        <li>FILTER_VALIDATE_FLOAT</li>
+                        <li>FILTER_VALIDATE_INT</li>
+                        <li>FILTER_VALIDATE_IP</li>
+                        <li>FILTER_VALIDATE_REGEXP</li>
+                        <li>FILTER_VALIDATE_URL</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Exercice 1</h2>
+                    <p>
+                        Tranform previous exercices 1, 2, 4, 5, 6 into a single webpage where the user can input the data to test.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Exerice 2</h2>
+                    <p>
+                        Create a signup form asking for the following data. If the form is correct, display a message
+                        congratuling the user. Otherwise, display an error message above the erronous information.
+                    </p>
+                    <ul>
+                        <li>First and lastname</li>
+                        <li>Date of birth</li>
+                        <li>Email address</li>
+                        <li>Link to their website</li>
+                        <li>Acceptance of TOS</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Exercice 3</h2>
+                    <p>
+                        Create a small web-app where the user can login given a email address and a password. If the information is
+                        correct, the user must be connected and be able to see his name. If not, he must see the login form.
+                        Add a logout link on the page that will deconnect the user.
+                    </p>
+                </section>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            theme: 'moon',
+            margin: 0,
+            //theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+        });
+    </script>
+</body>
+</html>
