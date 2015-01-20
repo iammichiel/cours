@@ -48,6 +48,15 @@
                 </section>
 
                 <section>
+                    <h2>Classes are templates</h2>
+                    <h2 class="fragment">Objects are intances</h2>
+                </section>
+
+                <section>
+                    <h2>A class is structure and behaviour</h2>
+                </section>
+
+                <section>
                     <h2>Object types</h2>
                     <ul>
                         <li class="fragment">Class</li>
@@ -61,22 +70,31 @@
                 <section>
                     <h2>Class</h2>
                     <pre><code data-trim class="php">
-class Person {
-    private $name;
+                        class Person {
+                            private $name;
 
-    public function setName($name) {
-        $this->name = $name;
-    }
+                            public function setName($name) {
+                                $this->name = $name;
+                            }
 
-    public function displayName() {
-        echo $this->name;
-    }
-}
+                            public function displayName() {
+                                echo $this->name;
+                            }
+                        }
 
-$michiel = new Person();
-$michiel->setName('michiel');
-$michiel->displayName();
+                        $michiel = new Person();
+                        $michiel->setName('michiel');
+                        $michiel->displayName();
                     </code></pre>
+                </section>
+
+                <section>
+                    <h2>Methods</h2>
+                    <ul>
+                        <li class="fragment">__construct()</li>
+                        <li class="fragment">__destruct()</li>
+                        <li class="fragment">__toString()</li>
+                    </ul>
                 </section>
 
                 <section>
@@ -86,6 +104,114 @@ $michiel->displayName();
                         <li>static</li>
                         <li>final</li>
                     </ul>
+                </section>
+
+                <section>
+                    <h2>Inheritance</h2>
+
+                    <h4>extends &amp; implements</h4>
+                </section>
+
+                <section>
+
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Exercices</h2>
+
+                    <p>
+                        Foreach of the following exercices, you must use object oriented design. One file per exercice.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Exercice 1</h2>
+                    <p>
+                        Create an array with at least 5 people. Each person must have a first name, a last name, a gender and a birthdate.<br>
+                    </p>
+
+                    <p>
+                        Display a table with the list of people. For each line, display the full name, the age and gender.
+                    </p>
+
+                    <ul>
+                        <li>Use object design for a Person</li>
+                        <li>Use the php object DateTime</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Exercice 2</h2>
+                    <h3>Travelling salesman problem</h3>
+                    <p>
+                        Find the shortest and the longest way to go through all points.
+                    </p>
+
+                    <table class="reveal">
+                        <tr>
+                            <th></th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                            <th>E</th>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>-</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>3</td>
+                            <td>9</td>
+                        </tr>
+
+                        <tr>
+                            <td>B</td>
+                            <td>9</td>
+                            <td>-</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>5</td>
+                        </tr>
+
+                        <tr>
+                            <td>C</td>
+                            <td>8</td>
+                            <td>16</td>
+                            <td>-</td>
+                            <td>11</td>
+                            <td>15</td>
+                        </tr>
+
+                        <tr>
+                            <td>D</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>-</td>
+                            <td>9</td>
+                        </tr>
+
+                        <tr>
+                            <td>E</td>
+                            <td>4</td>
+                            <td>11</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section>
+                    <h2>Exercice 3</h2>
+                    <h3>Simulating a shopping page</h3>
+                    <p>
+                        Create a single page displaying a list of products. Display an "Add to basket" button for each product.
+                        Display each product of basket, the quantity ordered and the price for each product. Add a clear basket button.
+                    </p>
                 </section>
             </section>
         </div>
@@ -106,10 +232,6 @@ $michiel->displayName();
             margin: 0,
             //theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
             transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
-
-            // Parallax scrolling
-            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-            // parallaxBackgroundSize: '2100px 900px',
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
