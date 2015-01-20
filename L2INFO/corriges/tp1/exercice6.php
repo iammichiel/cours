@@ -12,6 +12,8 @@ function getScore($name) {
     return $score;
 }
 
+
+
 echo getScore('PHP') . "\n";
 echo getScore('Lorem ipsum') . "\n";
 echo getScore('Je suis charlie') . "\n";
