@@ -115,6 +115,121 @@ $michiel->displayName();
 
             <section>
                 <section>
+                    <h2>PHP configuration</h2>
+
+                    <ul>
+                        <li>Uses configuration files</li>
+                        <li>Can be overriden at runtime with specific functions</li>
+                        <li>Or using ini_set</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>PHP as Apache moduel</h2>
+                    <pre><code class="php">
+&lt;?php phpinfo(); ?&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>PHP on command line</h2>
+                    <pre><code class="bash">
+$ php -i
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>PHP CLI</h2>
+                    <p>
+                        Offers a lot of possibilities. Can be used as to execute files. Can launch a webserver. Can check files syntax
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Other</h2>
+                    <ul>
+                        <li>Error and exception handling</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>PHP execution</h2>
+
+                    <p>3 levels</p>
+                    <ul>
+                        <li>ERROR</li>
+                        <li>WARNING</li>
+                        <li>NOTICE</li>
+                    </ul>
+
+                    <aside class="notes">
+                        ERROR : Erreur d'execution, it fails. Script is stopped<br>
+                        WARNING : It is wrong, it works, but will fail <br>
+                        NOTICE : this is bad and you know it
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Error configuration</h2>
+
+                    <ul>
+                        <li>error_reporting</li>
+                        <li>display_errors</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Error levels in configuration</h2>
+
+                    <ul>
+                        <li>E_ALL</li>
+                        <li>E_ERROR</li>
+                        <li>E_WARNING</li>
+                        <li>E_NOTICE</li>
+                        <li>E_NONE</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Exceptions</h2>
+
+                    <pre class="fragment"><code class="php" data-trim>
+throw new \Exception('Something went wrong !');
+                    </code></pre>
+
+                    <aside class="notes">
+                        Some behaviour can be predicted, as with exceptions.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Exceptions</h2>
+                    <pre class="fragment"><code class="php" data-trim>
+try {
+    callFunctionWithException();
+} catch (\Exception $e) {
+    // Do whatever you want
+} catch (\ProductNotFoundException $a) {
+    // Do something else
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Create new exceptions</h2>
+
+                    <pre><code class="php" data-trim>
+class ProductNotFoundException extends \Exception {
+
+}
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
                     <h2>Exercices</h2>
 
                     <p>
