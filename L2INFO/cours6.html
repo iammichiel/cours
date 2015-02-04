@@ -39,94 +39,175 @@
         <div class="slides">
             <section>
                 <h1>WEB 2</h1>
-                <h5>L2INFO - Part 5</h5>
+                <h5>L2INFO - Part 6</h5>
             </section>
 
-	        <section>
+            <section>
                 <h2>What did we learn ?</h2>
 
                 <ul>
                     <li>PHP basic syntax</li>
                     <li>PHP as a web technology</li>
                     <li>PHP is object oriented</li>
+                    <li>How to consume webservices</li>
                 </ul>
-	        </section>
+            </section>
 
             <section>
                 <section>
                     <h2>What is next ?</h2>
                     <ul>
-                        <li>How to use PHP in a real large project ?</li>
+                        <li>Manage persistence</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Structure your application</h2>
+                    <h2>Between each request, all data is thrown away</h2>
+
+                    <p>How do you manage to keep data between each execution ?</p>
                 </section>
 
                 <section>
-                    <h2>Separation of concerns</h2>
+                    <h2>a database !</h2>
                 </section>
 
                 <section>
-                    <h2>How to do that in PHP ?</h2>
+                    <h2>Database</h2>
+                    <ul>
+                        <li>Store data in a structured or unstructured way</li>
+                        <li>Have a retrieval mecanism</li>
+                    </ul>
+                </section>
+
+            </section>
+
+            <section>
+                <section>
+                    <h2>MySQL</h2>
+                    <p>
+                        Exists since 1995. <br>
+                        Bought by Sun in 2008 <br>
+                        Sun is bought by Oracle 2009
+                    </p>
+                </section>
+
+                <section>
+                    <h2>MariaDB</h2>
+                    <p>
+                        The creators of MySQL decided to create new version : MariaDB
+                    </p>
+                </section>
+
+                <section>
+                    <h2>MySQL is a relational database</h2>
 
                     <ul>
-                        <li>require / require_once</li>
-                        <li>include / include_once</li>
+                        <li>Databases</li>
+                        <li>Tables</li>
+                        <li>Rows</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Basic seperation</h2>
+                    <h2>MySQL is a server</h2>
+
                     <ul>
-                        <li>One class per file</li>
-                        <li>Separate html and php</li>
+                        <li class="fragment">Request/Response</li>
+                        <li class="fragment">SQL</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>MySQL : references</h2>
+
+                    <ul>
+                        <li>Wikipedia</li>
+                        <li>Facebook</li>
+                        <li>...</li>
                     </ul>
                 </section>
             </section>
 
             <section>
                 <section>
-                    <h2>Exercices</h2>
-                </section>
+                    <h2>MySQL in PHP : Workflow</h2>
 
-                <section>
-                    <h2>V'Lille</h2>
-
-                    <p>
-                        Transpole has an api available to get data from their services in real time. Create a web app that displays realtime the
-                        stations with the number of bikes/spots available.
-                    </p>
-                </section>
-
-                <section>
-                    <h2>V'Lille</h2>
                     <ul>
-                        <li>http://vlille.fr/stations/xml-stations.aspx</li>
-                        <li>http://vlille.fr/stations/xml-station.aspx?borne=<ID></li>
+                        <li>connect</li>
+                        <li class="fragment">execute</li>
+                        <li class="fragment">close</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>V'Lille</h2>
-                    <ul>
-                        <li>Use objects</li>
-                        <li>Separate concerns</li>
-                    </ul>
+                    <h2>MySQL : connect</h2>
+
+<pre><code class="php" data-trim>
+$connection = mysql_connect('host', 'login', 'password');
+mysql_select_db('databaseName', $connection);
+</code></pre>
+
                 </section>
 
                 <section>
-                    <h2>Encoding</h2>
-                    <p>
-                        The api is badly encoded. Before passing the data to the xml parser, simply replace utf-16 by utf-8.
-                    </p>
-
-                    <pre><code data-trim class="php">
-$xml = str_replace('utf-16', 'utf-8', $xml);
-                    </code></pre>
+                    <h2>MySQL : executing query</h2>
+<pre><code class="php" data-trim>
+mysql_query(‘SELECT ...’);
+mysql_fetch_assoc($requete);
+mysql_fetch_row($requete);
+mysql_fetch_object($requete);
+</code></pre>
                 </section>
             </section>
+
+            <section>
+                <section>
+                    <h2>Exercice</h2>
+                </section>
+
+                <section>
+                    <h2>User management</h2>
+                    <p>Create a table containing `users`. A user is defined by : </p>
+                    <ul>
+                        <li>Username</li>
+                        <li>Email</li>
+                        <li>Password</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Listing the users</h2>
+
+                    <p>
+                        Display a simple html table containing all users saved in the
+                        database. Add a link to the page to add new users.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Adding a user</h2>
+                    <p>
+                        Create a webpage with a form that asks the user for all information about the
+                        user. If the input is valid, add a new user to the database.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Updating a user</h2>
+                    <p>
+                        A user can be updated. Display a link in the table, to edit
+                        a given user.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Deleting a user</h2>
+                    <p>
+                        A user can be deleted. Display a delete link for each line in the table.
+                    </p>
+                </section>
+            </section>
+
         </div>
     </div>
 
