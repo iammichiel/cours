@@ -208,6 +208,129 @@ mysql_fetch_object($requete);
                 </section>
             </section>
 
+            <section>
+                <section>
+                    <h2>MySQL is obsolete</h2>
+                </section>
+
+                <section>
+                    <h2>PHP Data Objects</h2>
+
+                    <p>
+                        The PHP Data Objects (PDO) extension defines a lightweight,
+                         consistent interface for accessing databases in PHP.
+                    </p>
+
+                    <p>
+                        PDO provides a data-access abstraction layer, which means
+                        that, regardless of which database you're using, you use
+                        the same functions to issue queries and fetch data.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Cool features</h2>
+                    <ul>
+                        <li class="fragment">Data-access abstraction</li>
+                        <li class="fragment">Transaction</li>
+                        <li class="fragment">prepare/execute</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>PDO workflow</h2>
+
+                    <ul>
+                        <li>Connection</li>
+                        <li>Usage</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>PDO Connection</h2>
+
+                    <pre><code class="php">
+$dsn = 'mysql:host=127.0.0.1;dbname=cours'
+
+$pdo = new PDO($dsn, $username, $password);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>PDO throws Exceptions</h2>
+
+                    <pre><code class="php" data-trim>
+class PDOException extends Exception {
+    function getMessage() {}
+    function getCode() {}
+    function getTrace() {}
+    ...
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>PDO methods</h2>
+
+                    <ul>
+                        <li class="fragment">query</li>
+                        <li class="fragment">prepare</li>
+                        <li class="fragment">execute</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>PDOStatement methods</h2>
+                    <ul>
+                        <li class="fragment">fetch</li>
+                        <li class="fragment">fetchAll</li>
+                        <li class="fragment">fetchObject</li>
+                        <li class="fragment">fetchColumn</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Run query</h2>
+
+                    <pre><code class="php" data-trim>
+$query = $pdo->query("SELECT * FROM users");
+$users = $query->fetchAll();
+// or
+$singleResult = $query->fetch();
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1 class="fragment highlight-red">Users are evil</h1>
+                </section>
+
+                <section>
+                    <h2>Simple parameter</h2>
+                    <pre><code class="php" data-trim>
+$query = $pdo->prepare("SELECT * FROM users WHERE id = ?");
+$result = $query->execute(array(1));
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Name parameters</h2>
+                    <pre><code class="php" data-trim>
+$query = $pdo->prepare("SELECT * FROM users WHERE id = :id");
+$result = $query->execute(array('id' => 1));
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <h2>Exercice</h2>
+
+                <p>
+                    Take the previously created project for the user creation and
+                    change all mysql function to PDO. Behaviour must be the same
+                    as before.
+                </p>
+            </section>
+
         </div>
     </div>
 
