@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rsync -rv . orange:/srv/www/l2info \
+rsync -rv . purple:/srv/www/l2info \
 	--exclude=.git \
 	--exclude=node_modules \
 	--exclude=package.json \
